@@ -1,0 +1,31 @@
+###Create a virtual environment by running the following command:
+python -m venv venv
+
+###Activate the virtual environment:
+For Windows:
+.\venv\Scripts\activate
+
+###Install necessary dependencies
+
+In the terminal, make sure you are still in the "oil_app" folder, and then run the following command to install Dash and other required packages:
+pip install dash
+
+
+###Create a Dash app
+
+###Test your app locally
+
+###Open your web browser and visit http://127.0.0.1:8050 to see your app running locally. Test it to ensure it's working as expected.
+
+###Publish your app on Render.com
+
+###Create an account on Render.com if you haven't already.
+Log in to Render.com and click on "Create a New Service" or "Create New +" button.
+Select "Web Service" as the service type.
+Configure your service:
+Choose a name for your service.
+Set the "Environment" to "Python".
+Set the "Environment" to "Dockerfile".
+Set the "Build Command" to:
+
+pip install -r requirements.txt
