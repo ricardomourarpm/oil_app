@@ -19,7 +19,7 @@ numpy
 packaging==23.1
 pandas
 plotly==5.14.1
-pyproj==3.5.0
+pyproj
 python-dateutil==2.8.2
 pytz==2023.3
 shapely==2.0.1
