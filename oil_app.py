@@ -69,6 +69,7 @@ external_stylesheets = ['style.css']
 # Create Dash app
 app = dash.Dash(__name__, external_stylesheets = external_stylesheets
                 )
+server = app.server
 
 app.title = 'Portuguese Potential Oil Spills'
 
