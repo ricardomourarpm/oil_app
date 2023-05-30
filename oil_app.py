@@ -30,9 +30,31 @@ data.insert(1, 'registry_nr', data.pop('registry_nr'))
 
 stations = pd.read_pickle(r'stations.pickle')
 
+# translate
+translation_dict = {
+    'Pista/Porto': 'Runway/Port',
+    'Local': 'Location',
+    'Latitude': 'Latitude',
+    'Longitude': 'Longitude',
+    'Veículo não Tripulado': 'Unmanned Vehicle',
+    'lat': 'lat',
+    'lon': 'lon',
+    'usv_uav_autonomy_km': 'usv_uav_autonomy_km'
+}
+
+stations = stations.rename(columns=translation_dict)
+
+translation_dict = {
+    'Aéreo': 'Aerial',
+    'Superfície': 'Surface'
+}
+
+stations['Unmanned Vehicle'] = stations['Unmanned Vehicle'].map(translation_dict)
+
+
 # define color
 
-stations['colors'] = ['red' if vehicle=='Aéreo' else 'blue' for vehicle in stations['Veículo não Tripulado']]
+stations['colors'] = ['red' if vehicle=='Aerial' else 'blue' for vehicle in stations['Veículo não Tripulado']]
 
 import numpy as np
 import pandas as pd
