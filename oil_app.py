@@ -299,7 +299,7 @@ def update_stations_map(data_s, selected_rows):
     selected_data = pd.DataFrame(data_s).iloc[selected_rows, :]
 
     # Create an empty map figure
-    fig = px.scatter_mapbox(selected_data, lat='lat', lon='lon', zoom=3.5, height=600,color='Veículo não Tripulado',color_discrete_sequence=['red','blue'])
+    fig = px.scatter_mapbox(selected_data, lat='lat', lon='lon', zoom=3.5, height=600,color='Unmanned Vehicle',color_discrete_sequence=['red','blue'])
     fig.update_layout(mapbox_style="open-street-map")
     
 
