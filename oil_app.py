@@ -54,7 +54,7 @@ stations['Unmanned Vehicle'] = stations['Unmanned Vehicle'].map(translation_dict
 
 # define color
 
-stations['colors'] = ['red' if vehicle=='Aerial' else 'blue' for vehicle in stations['Veículo não Tripulado']]
+stations['colors'] = ['red' if vehicle=='Aerial' else 'blue' for vehicle in stations['Unmanned Vehicle']]
 
 import numpy as np
 import pandas as pd
